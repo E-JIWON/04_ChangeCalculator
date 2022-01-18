@@ -1,0 +1,73 @@
+doctype html 
+html(lang="ko")
+     head 
+          meta(charset="utf-8")
+          link(rel="shortcut icon", type="image⁄x-icon", href="./img/donut_logo.png")
+          title 거스름돈 계산기
+          script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js")
+          link(rel="stylesheet", href="./css/index.css")
+          //- script(src="./js/index.min.js")
+          script(src="./js/index.js")
+     body 
+          section.container
+               //도넛 목록
+               section.donut_wrap
+                    //물건목록
+                    div.tray_wrap
+                         - const productNameArr = {'소금우유':'2,810', '초코후로스티드':'2,930', '글레이즈드':'3,270', '초코바나나':'2,250', '바바리안필드':'3,340', '사빠딸':'2,510', '먼치킨':'4,890', '초코칩머핀':'4,150','솔티카라멜':'3,010'}
+                         each productPrice, productName in productNameArr
+                              ul.clickEventClass
+                                   li.img_wrap
+                                   li 
+                                        span= productName
+                                   li
+                                        span= productPrice 
+               //빌지
+               section.price_list_wrap
+                    section.list_wrap
+                         div.list_title 주문 목록
+                         div.list_product
+                         //가격
+                         section.total_price_wrap
+                              div.bill_total
+                                   div
+                                        span 전체 수량
+                                        span.total_count 0
+                                   div 
+                                        span 전체 가격
+                                        span.total_price 0
+               //지불 금액
+               setion.money_wrap 
+                    img(src="./img/donut_logo.png", alt="로고",class="donut_icon")
+                    setion.moneyKind_wrap
+                         - const moneykindArr = ['50,000', '10,000', '5,000','1,000','500','100','50','10']
+                         for money in moneykindArr
+                              div.moneyKind= money
+
+                    setion.payment_wrap
+                         div.payment_span_wrap
+                              span 지불 금액
+                              span.total_money 0
+                         input(type="hidden", class ="totalAmount")
+                         input(type="hidden", class ="totalPay")
+                         div.payment_btn 지불
+                         div.clear_btn 초기화
+          section.popupbg
+          section.change_popup_wrap
+               div.receipt_title 거스름돈 정보
+                    div
+                         span 거스름돈
+                         span.changeMoneySpan
+                         span 원
+                    - const moneykindArr2 = ['50,000', '10,000', '5,000','1,000','500','100','50','10']
+                    for money in moneykindArr2
+                         div
+                              span=money
+                              span.moneyChange
+                              span 개
+               div.reset_btn 처음부터
+               div.close_btn 닫기
+          section.popup_text 
+               span 여기에 텍스트
+               div.reset_btn 처음부터
+               div.close_btn 닫기

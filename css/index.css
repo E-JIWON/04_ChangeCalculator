@@ -1,0 +1,475 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+@font-face {
+  font-family: 'everyB';
+  src: url("../ttf/210 에브리바디B.ttf");
+}
+
+@font-face {
+  font-family: 'everyR';
+  src: url("../ttf/210 에브리바디R.ttf");
+}
+
+@font-face {
+  font-family: 'everyL';
+  src: url("../ttf/210 에브리바디L.ttf");
+}
+
+@font-face {
+  font-family: 'numberFontR';
+  src: url("../ttf/210 산들바람R.ttf");
+}
+
+@font-face {
+  font-family: 'numberFontL';
+  src: url("../ttf/210 산들바람L.ttf");
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #e8747e;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.container {
+  background-image: url("../img/d2-01.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.container .donut_wrap {
+  width: 30%;
+  margin: 8% 0 0 8%;
+}
+
+.container .donut_wrap .tray_wrap {
+  width: 100%;
+  height: 35vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container .donut_wrap .tray_wrap ul {
+  width: 29%;
+  margin: 2%;
+  cursor: pointer;
+  font-family: "everyR";
+  color: #471d4f;
+  font-size: 1.7vw;
+}
+
+.container .donut_wrap .tray_wrap ul .img_wrap {
+  height: 60%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+.container .donut_wrap .tray_wrap ul li:nth-child(2), .container .donut_wrap .tray_wrap ul li:nth-child(3) {
+  text-align: center;
+  height: 20%;
+  line-height: 150%;
+}
+
+.container .donut_wrap .tray_wrap ul li:last-child {
+  font-size: 1.3vw;
+  font-family: "numberFontL";
+}
+
+.container .price_list_wrap {
+  width: 27vw;
+  margin: 4vw 1vw;
+  background-image: url("../img/bill_bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: contain;
+}
+
+.container .price_list_wrap .list_wrap {
+  width: 80%;
+  height: 33vw;
+  margin: 5vw 2.5vw;
+  position: relative;
+}
+
+.container .price_list_wrap .list_wrap .list_title {
+  width: 100%;
+  text-align: center;
+  font-family: "everyB";
+  font-size: 1.8vw;
+  padding-bottom: 1vh;
+  color: #471d4f;
+  border-bottom: 0.2vw solid #e8747e;
+}
+
+.container .price_list_wrap .list_wrap .list_product {
+  width: 100%;
+  float: left;
+}
+
+.container .price_list_wrap .list_wrap .list_product section {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  height: 100%;
+  margin-top: 0.8vw;
+  font-family: "everyR";
+  font-size: 1.45vw;
+}
+
+.container .price_list_wrap .list_wrap .list_product section span, .container .price_list_wrap .list_wrap .list_product section div, .container .price_list_wrap .list_wrap .list_product section button {
+  display: inline-block;
+  float: left;
+}
+
+.container .price_list_wrap .list_wrap .list_product section .product_name {
+  width: 38%;
+  margin-left: 2%;
+}
+
+.container .price_list_wrap .list_wrap .list_product section .list_count_btn {
+  width: 30%;
+}
+
+.container .price_list_wrap .list_wrap .list_product section .list_count_btn #minus_btn, .container .price_list_wrap .list_wrap .list_product section .list_count_btn #plus_btn {
+  width: 25%;
+  margin: 0 1%;
+  text-align: center;
+  color: #fae7ed;
+  background-color: #e8747e;
+}
+
+.container .price_list_wrap .list_wrap .list_product section .list_count_btn #minus_btn:hover, .container .price_list_wrap .list_wrap .list_product section .list_count_btn #plus_btn:hover {
+  cursor: pointer;
+  color: #fae7ed;
+  background-color: #471d4f;
+}
+
+.container .price_list_wrap .list_wrap .list_product section .list_count_btn .product_count {
+  width: 25%;
+  margin: 0 3%;
+  text-align: center;
+}
+
+.container .price_list_wrap .list_wrap .list_product section .product_price_wrap {
+  width: 30%;
+}
+
+.container .price_list_wrap .list_wrap .list_product section .product_price_wrap .product_total_price {
+  width: 50%;
+  text-align: center;
+}
+
+.container .price_list_wrap .list_wrap .list_product section .product_price_wrap span:nth-child(2) {
+  width: 20%;
+  text-align: left;
+}
+
+.container .price_list_wrap .list_wrap .list_product section .product_price_wrap #del_btn {
+  width: 25%;
+  margin: 0 1%;
+  text-align: center;
+  color: #fae7ed;
+  background-color: #e8747e;
+  margin-right: 2%;
+}
+
+.container .price_list_wrap .list_wrap .list_product section .product_price_wrap #del_btn:hover {
+  cursor: pointer;
+  color: #fae7ed;
+  background-color: #471d4f;
+}
+
+.container .price_list_wrap .list_wrap .total_price_wrap {
+  float: left;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  margin-bottom: 5%;
+}
+
+.container .price_list_wrap .list_wrap .total_price_wrap div.bill_total {
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+.container .price_list_wrap .list_wrap .total_price_wrap div.bill_total div {
+  width: 94%;
+  height: 44%;
+  margin: 3%;
+  font-size: 1.5vw;
+  font-family: "everyB";
+  background-color: #e8747e;
+  color: #fae7ed;
+  border-radius: 0.4vw;
+  -webkit-border-radius: 0.4vw;
+  -moz-border-radius: 0.4vw;
+  -ms-border-radius: 0.4vw;
+  -o-border-radius: 0.4vw;
+}
+
+.container .price_list_wrap .list_wrap .total_price_wrap div.bill_total div span {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  text-align: center;
+  line-height: 200%;
+}
+
+.container .price_list_wrap .list_wrap .total_price_wrap div.bill_total div:last-child {
+  background-color: #471d4f;
+}
+
+.container .money_wrap {
+  width: 25%;
+  height: 100%;
+  margin-right: 8%;
+  text-align: center;
+  font-family: "everyR";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .money_wrap .donut_icon {
+  width: 30vh;
+  height: 30vh;
+}
+
+.container .money_wrap .moneyKind_wrap {
+  margin: 5% 0;
+}
+
+.container .money_wrap .moneyKind_wrap .moneyKind {
+  cursor: pointer;
+  width: 48%;
+  height: 5vh;
+  line-height: 5vh;
+  margin: 1%;
+  float: left;
+  display: inline-block;
+  color: #fae7ed;
+  font-size: 1.5vw;
+  text-align: center;
+  background-color: #e8747e;
+  border-radius: 0.7vw;
+  -webkit-border-radius: 0.7vw;
+  -moz-border-radius: 0.7vw;
+  -ms-border-radius: 0.7vw;
+  -o-border-radius: 0.7vw;
+}
+
+.container .money_wrap .moneyKind_wrap .moneyKind:hover {
+  color: #fae7ed;
+  background-color: #471d4f;
+}
+
+.container .money_wrap .payment_wrap {
+  width: 100%;
+  float: left;
+  margin-top: 5%;
+}
+
+.container .money_wrap .payment_wrap .payment_span_wrap {
+  width: 100%;
+  height: 5vh;
+  line-height: 5vh;
+}
+
+.container .money_wrap .payment_wrap .payment_span_wrap span {
+  display: inline-block;
+  font-family: "everyB";
+  font-size: 2vw;
+  color: #471d4f;
+}
+
+.container .money_wrap .payment_wrap .payment_span_wrap span:first-child {
+  width: 50%;
+}
+
+.container .money_wrap .payment_wrap .payment_span_wrap span:last-child {
+  width: 50%;
+}
+
+.container .money_wrap .payment_wrap .payment_btn, .container .money_wrap .payment_wrap .clear_btn {
+  float: left;
+  width: 48%;
+  height: 5vh;
+  line-height: 5vh;
+  margin: 1%;
+  font-size: 1.3vw;
+  color: #fae7ed;
+  background-color: #471d4f;
+  border-radius: 0.5vw;
+  -webkit-border-radius: 0.5vw;
+  -moz-border-radius: 0.5vw;
+  -ms-border-radius: 0.5vw;
+  -o-border-radius: 0.5vw;
+}
+
+.container .money_wrap .payment_wrap .payment_btn:hover, .container .money_wrap .payment_wrap .clear_btn:hover {
+  cursor: pointer;
+  color: #fae7ed;
+  background-color: #e8747e;
+}
+
+.popupbg {
+  z-index: 500;
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.change_popup_wrap {
+  position: absolute;
+  z-index: 1000;
+  display: none;
+  width: 15vw;
+  height: 55vh;
+  padding: 2.5vh 2.5vw;
+  top: 50%;
+  left: 50%;
+  margin-top: -30vh;
+  margin-left: -7.5vw;
+  background-color: #e8747e;
+}
+
+.change_popup_wrap .receipt_title {
+  font-family: "everyB";
+  font-size: 2vw;
+  text-align: center;
+  color: #fae7ed;
+  width: 100%;
+  height: 80%;
+  float: left;
+}
+
+.change_popup_wrap .receipt_title div {
+  width: 100%;
+  height: 5%;
+  margin-top: 5%;
+  font-family: "everyR";
+  font-size: 1.5vw;
+}
+
+.change_popup_wrap .receipt_title div span {
+  display: block;
+  float: left;
+}
+
+.change_popup_wrap .receipt_title div span:first-child {
+  width: 50%;
+  text-align: left;
+}
+
+.change_popup_wrap .receipt_title div span:nth-child(2) {
+  width: 30%;
+  text-align: right;
+}
+
+.change_popup_wrap .receipt_title div span:last-child {
+  width: 20%;
+  text-align: right;
+}
+
+.change_popup_wrap .receipt_title div:first-child {
+  margin: 12% 0;
+  font-size: 1.75vw;
+  font-family: "everyB";
+  color: #471d4f;
+  font-size: 1.5vw;
+  font-family: "numberFontR";
+}
+
+.close_btn, .reset_btn {
+  width: 45%;
+  height: 10%;
+  margin: 0 2.5%;
+  margin-top: 10%;
+  text-align: center;
+  float: left;
+  font-size: 1.5vw;
+  font-family: "everyB";
+  line-height: 200%;
+  color: #fae7ed;
+  background-color: #471d4f;
+  border-radius: 0.5vw;
+  -webkit-border-radius: 0.5vw;
+  -moz-border-radius: 0.5vw;
+  -ms-border-radius: 0.5vw;
+  -o-border-radius: 0.5vw;
+}
+
+.close_btn:hover, .reset_btn:hover {
+  background-color: #fae7ed;
+  color: #471d4f;
+  cursor: pointer;
+}
+
+.popup_text {
+  z-index: 1000;
+  position: absolute;
+  display: none;
+  width: 15vw;
+  height: 15vh;
+  top: 50%;
+  left: 50%;
+  margin-top: -7.5vh;
+  margin-left: -7.5vw;
+  background-color: #e8747e;
+  padding: 2.5vh 2.5vw;
+}
+
+.popup_text span {
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 20%;
+  font-family: "everyR";
+  color: #fae7ed;
+  font-size: 1.7vw;
+  line-height: 250%;
+}
+
+.popup_text .close_btn, .popup_text .reset_btn {
+  height: 40%;
+  margin-top: 20%;
+}
+/*# sourceMappingURL=index.css.map */
